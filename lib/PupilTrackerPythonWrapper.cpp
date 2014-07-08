@@ -18,20 +18,20 @@ py::list findPupil(PyObject *mat, int radius_min = 3, int radius_max = 8, double
 
 	//Initialize pupiltracker
 	pupiltracker::TrackerParams params;
-        params.Radius_Min = radius_min; //int(param_vec[0]); //Default = 3
-        params.Radius_Max = radius_max; //int(param_vec[1]); //Default = 8
+        params.Radius_Min = radius_min; //Default = 3
+        params.Radius_Max = radius_max; //Default = 8
 
-        params.CannyBlur = canny_blur; //param_vec[2]; //Default = 1
-        params.CannyThreshold1 = canny_threshold; //param_vec[3]; //Default = 20
-        params.CannyThreshold2 = canny_threshold2; //param_vec[4]; //Default = 40
-        params.StarburstPoints = starburst_points; //int(param_vec[5]); //Default = 0
+        params.CannyBlur = canny_blur; //Default = 1
+        params.CannyThreshold1 = canny_threshold; //Default = 20
+        params.CannyThreshold2 = canny_threshold2; //Default = 40
+        params.StarburstPoints = starburst_points; //Default = 0
 
-        params.PercentageInliers = percentage_inliers; //int(param_vec[6]); //Default = 30
-        params.InlierIterations = inlier_iterations; //int(param_vec[7]); //Default = 2
-        params.ImageAwareSupport = image_aware_support;
-        params.EarlyTerminationPercentage = early_termination_percentage; //int(param_vec[8]); //Default = 95
-        params.EarlyRejection = early_rejection;
-        params.Seed = seed; //int(param_vec[9]); //Default = -1
+        params.PercentageInliers = percentage_inliers; //Default = 30
+        params.InlierIterations = inlier_iterations; //Default = 2
+        params.ImageAwareSupport = image_aware_support; //Default = true
+        params.EarlyTerminationPercentage = early_termination_percentage; //Default = 95
+        params.EarlyRejection = early_rejection; //Default = true
+        params.Seed = seed; //Default = -1
 
         pupiltracker::findPupilEllipse_out out;
         pupiltracker::tracker_log log;
